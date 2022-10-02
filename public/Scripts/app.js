@@ -1,10 +1,9 @@
-// IIFE - Immediate Invoked Function Expression
 
+// show an alert message that the form is submitted sucessfully
 (function(){
     function Start(){
         firstName = document.getElementById('firstName').value;
         alert(`Hi ` + firstName + `! Your form is submitted sucessfully! We will contact you shortly! Thank you!`) ;
-
     }
 
     window.addEventListener("submit", Start);
@@ -12,7 +11,7 @@
 
 
 
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    // Form validation - get from Bootstrap 5.0 Docs
     (() => {
         'use strict'
       
@@ -27,11 +26,8 @@
               event.stopPropagation()
             }
             form.classList.add('was-validated')
-            
           }, false)
         })
-
-
       })()
       
       

@@ -1,3 +1,10 @@
+/**
+ * Filename: app.js
+ * Student name: Nguyen, Huynh Quang Vinh
+ * Student ID: 301214805
+ * Date: Oct 1st, 2022
+ */
+
 //installed 3rd party packages
 let createError = require('http-errors');
 let express = require('express');

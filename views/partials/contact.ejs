@@ -1,47 +1,59 @@
 <section class="p-1  bg-success">
 <div class="container">
-<h1 class="text-warning text-center col-lg-6"><strong>Contact Form</strong></h1>
-<form class="needs-validation justify-content-center" id="form" action="/contact/submit" method="POST" novalidate>
-    <div class="col-lg-6 my-2">
-      <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
-      <div class="invalid-feedback">
-        Please provide a valid name
-      </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <h1 class="text-warning text-center"><strong>Get in touch</strong></h1>
+      <form class="needs-validation justify-content-center" id="form" action="/contact/submit" method="POST" novalidate>
+          <div class="my-2">
+            <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+            <div class="invalid-feedback">
+              Please provide a valid name
+            </div>
+          </div>
+          <div class="my-2">
+            <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+            <div class="invalid-feedback">
+              Please provide a valid name
+            </div>
+          </div>
+      
+          <div class="my-2">
+            <input type="number" class="form-control" id="phoneNumber" placeholder="Phone number" required>
+            <div class="invalid-feedback">
+              Please provide a valid phone number
+            </div>
+          </div>
+      
+          <div class="my-2">
+            <input type="email" class="form-control"  id="email" placeholder="Email" required>
+            <div class="invalid-feedback">
+              Please provide a valid email
+            </div>
+          </div>
+      
+          <div class="my-2">
+            <textarea class="form-control" rows="5" id="validationTextarea" placeholder="Message" required></textarea>
+            <div class="invalid-feedback">
+              Please enter a message in the textarea.
+            </div>
+          </div>
+      
+          <div class="text-center my-2">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </div>
+        </form>
+      
+        <p id="log"></p>
     </div>
-    <div class="col-lg-6 my-2">
-      <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
-      <div class="invalid-feedback">
-        Please provide a valid name
-      </div>
+    <div class="col-lg-6 px-3 ">
+        <h1 class="text-warning"><strong><i class="fa-regular fa-address-card"></i> Contact Information</strong></h1>
+        <h4 class="text-dark"><i class="fa-solid fa-square-envelope"></i>: vinh.nguyenhuynhquang@gmail.com<br></h4>
+        <h4><i class="fa-solid fa-square-phone"></i>: +1 647 469 7919<br></h4>
+        <h4><i class="fa-solid fa-location-dot"></i>: 200 Colbeck Str, Toronto<br></h4>        
+      
     </div>
+  </div>
 
-    <div class="col-lg-6 my-2">
-      <input type="number" class="form-control" id="phoneNumber" placeholder="Phone number" required>
-      <div class="invalid-feedback">
-        Please provide a valid phone number
-      </div>
-    </div>
-
-    <div class="col-lg-6 my-2">
-      <input type="email" class="form-control"  id="email" placeholder="Email" required>
-      <div class="invalid-feedback">
-        Please provide a valid email
-      </div>
-    </div>
-
-    <div class="col-lg-6 my-2">
-      <textarea class="form-control" rows="5" id="validationTextarea" placeholder="Message" required></textarea>
-      <div class="invalid-feedback">
-        Please enter a message in the textarea.
-      </div>
-    </div>
-
-    <div class="col-lg-6 text-center my-2">
-      <button class="btn btn-primary" type="submit">Submit form</button>
-    </div>
-  </form>
-
-  <p id="log"></p>
 <br>
 <br>
 </div>

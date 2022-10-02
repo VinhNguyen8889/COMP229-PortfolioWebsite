@@ -31,7 +31,7 @@ router.get('/contact', function(req, res, next) {
   res.render('index', { title: 'Contact',});
 });
 
-/* POST Contact page. */
+/* POST Contact page and return to Home Page. */
 router.post('/contact/submit', function(req, res, next) {
   res.redirect('/');
 });
