@@ -1,4 +1,9 @@
-
+/**
+ * Filename: app.js
+ * Student name: Nguyen, Huynh Quang Vinh
+ * Student ID: 301214805
+ * Date: Oct 1st, 2022
+ */
 // show an alert message that the form is submitted sucessfully
 (function(){
     function Start(){

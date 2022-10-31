@@ -8,7 +8,8 @@
  * Filename: server.js
  * Student name: Nguyen, Huynh Quang Vinh
  * Student ID: 301214805
- * Date: Oct 1st, 2022
+ * Web App name: Portfolio Website - Assignment 2
+ * Date: Oct 31st, 2022
  */
 
 var app = require('./app');

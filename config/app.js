@@ -22,7 +22,7 @@ let flash = require("connect-flash");
 
 //database_setup
 let mongoose = require("mongoose");
-let DB = require("./config/db");
+let DB = require("./db");
 
 //point mongoose to the DB URI
 mongoose.connect(DB.URI, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -33,22 +33,22 @@ mongodb.once("open", () => {
   console.log("Database Connected");
 });
 
-let indexRouter = require("./routes/index");
-let usersRouter = require("./routes/users");
-let contactsRouter = require("./routes/contact");
+let indexRouter = require("../routes/index");
+let usersRouter = require("../routes/users");
+let contactsRouter = require("../routes/contact");
 
 let app = express();
 
 // view engine setup
-app.set("views", path.join(__dirname, "./views"));
+app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs"); // express  -e
 
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "./public")));
-app.use(express.static(path.join(__dirname, "./node_modules")));
+app.use(express.static(path.join(__dirname, "../../public")));
+app.use(express.static(path.join(__dirname, "../../node_modules")));
 
 //setup express session
 app.use(
@@ -69,7 +69,7 @@ app.use(passport.session());
 //passport user configuration
 
 //create usermodel instance
-let userModel = require("./models/user");
+let userModel = require("../models/user");
 let User = userModel.User;
 
 //implement a user authenticaion Strategy
@@ -82,6 +82,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/contact-list", contactsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
